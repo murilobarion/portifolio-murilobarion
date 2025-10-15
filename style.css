@@ -358,29 +358,26 @@ section > p {
     background-color: var(--cor-destaque-secundario);
 }
 
-/* ======================================================= */
-/* 📣 SEÇÃO "MAIS PROJETOS" (GITHUB CTA) 📣 */
-/* ======================================================= */
 .mais-projetos-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 5rem; /* Dá um espaço generoso depois dos cards */
+    margin-top: 5rem;
 }
 
 .mais-projetos-container p {
     color: var(--cor-texto-medio);
     font-size: 1.5rem;
-    max-width: 600px; /* Evita que o texto fique muito largo */
-    margin-bottom: 2rem; /* Espaço entre o texto e o botão */
+    max-width: 600px;
+    margin-bottom: 2rem; 
 }
 
 .btn-github {
     display: inline-block;
     background-color: var(--cor-destaque-primario);
     color: var(--cor-fundo-principal);
-    padding: 1rem 3rem; /* Botão maior e com mais destaque */
+    padding: 1rem 3rem; 
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
