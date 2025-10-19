@@ -10,22 +10,20 @@ const sections = document.querySelectorAll('section[id]');
                 let sectionId = current.getAttribute('id');
 
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLinks.forEach(link => link.classList.remove('active')); // Limpa todos
+                    navLinks.forEach(link => link.classList.remove('active')); 
                     document.querySelector('header nav a[href*=' + sectionId + ']').classList.add('active');
                 }
             });
         }
 
         window.addEventListener('scroll', highlightMenu);
-        
-        // Para garantir que o link correto esteja ativo ao carregar a página
         document.addEventListener("DOMContentLoaded", highlightMenu);
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('formulario-contato');
     
     async function handleSubmit(event) {
-        event.preventDefault(); // Impede o envio padrão (e o redirecionamento)
+        event.preventDefault(); 
         
         const formData = new FormData(form);
         const action = form.getAttribute('action');
@@ -35,20 +33,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: 'POST',
                 body: formData,
                 headers: {
-                    'Accept': 'application/json' // Pede uma resposta em formato de dados
+                    'Accept': 'application/json'
                 }
             });
 
             if (response.ok) {
-                // Se deu tudo certo...
                 alert('MENSAGEM ENVIADA! OBRIGADO, LOGO ENTRAREI EM CONTATO');
-                form.reset(); // ✨ AQUI A MÁGICA ACONTECE: limpa todos os campos! ✨
+                form.reset();
             } else {
-                // Se o servidor respondeu com erro
                 alert('Oops! Ocorreu um problema ao enviar seu formulário. Tente novamente.');
             }
         } catch (error) {
-            // Se deu erro de conexão (ex: sem internet)
             alert('Erro de conexão. Verifique sua internet e tente novamente.');
         }
     }
